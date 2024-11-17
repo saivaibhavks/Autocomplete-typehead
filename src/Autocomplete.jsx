@@ -4,9 +4,8 @@ const Autocomplete = () => {
   const [inputVal, setInputVal] = useState("");
   const fetchProducts = async (e) => {
     console.log("val", e.target.value);
-    fetch("https://dummyjson.com/products/search?q=phone")
-      .then((res) => res.json())
-      .then(console.log);
+    const json = await fetch("https://dummyjson.com/products/search?q=phone");
+    console.log("json", json);
   };
   return (
     <div className="container">
