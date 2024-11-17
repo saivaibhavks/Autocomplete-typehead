@@ -2,8 +2,11 @@ import { useState } from "react";
 
 const Autocomplete = () => {
   const [inputVal, setInputVal] = useState("");
-  const fetchProducts = (e) => {
+  const fetchProducts = async (e) => {
     console.log("val", e.target.value);
+    fetch("https://dummyjson.com/products/search?q=phone")
+      .then((res) => res.json())
+      .then(console.log);
   };
   return (
     <div className="container">
