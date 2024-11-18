@@ -6,7 +6,6 @@ const Autocomplete = () => {
     console.log("val", e.target.value);
     const json = await fetch("https://dummyjson.com/products/search?q=phone");
     const reps = json.json();
-    console.log("json", json);
   };
   return (
     <div className="container">
